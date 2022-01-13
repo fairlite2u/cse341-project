@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <% include ../includes/header.ejs %>
+</head>
+
+<body>
+  <% include ../includes/nav.ejs %>
+    <div class="jumbotron text-center">
+      <div class="container">
+        <h1>
+          <%= title %>
+        </h1>
+      </div>
+    </div>
+    <div class="container">
+      <% if(error != null) { %>
+      <div class="errors">
+        <p> <%= error %>
+        </p>
+      </div>
+      <% } %>
+      <form action="/ta02/addUser" method="POST">
+        <label for="username">Add Username:</label>
+        <input type="text" name="username" id="username">
+        <input type="submit" value="Submit">
+      </form>
+
+      <form id="removeForm" action="/ta02/removeUser" method="POST">
+        <label for="username">Remove Username:</label>
+        <% if (users.length > 0) { %>
+          <select form="removeForm" class="userlist" name="username" id="username">
+              <% for (let user of users) { %>
+                  <option class="user" value="<%= user %>"><%= user %></option>
+              <% } %>
+          </select>
+      <% } else { %>
+        <h2>No users found.</h2>   
+      <% } %>
+        <input type="submit" value="Submit">
+      </form>
+        <% if (users.length > 0) { console.log(users)%>
+          <ul class="userlist">
+              <% for (let user of users) { console.log(user) %>
+                  <li class="user"><%= user %></li>
+              <% } %>
+          </ul>
+      <% } else { %>
+        <h2>No users found.</h2>   
+      <% } %>
+    </div>
+
+
+</body>
+
+</html>
