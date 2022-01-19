@@ -14,7 +14,7 @@
       "type": "pwa-node"
     },
     {
-      "name": "Launch Node Program",
+      "name": "Launch Node App Program",
       "program": "${workspaceFolder}\\app.js",
       "request": "launch",
       "skipFiles": [
@@ -23,13 +23,13 @@
       "type": "pwa-node"
     },
     {
-      "type": "pwa-node",
+      "name": "Launch Node Index Program",
+      "program": "${workspaceFolder}\\index.js",
       "request": "launch",
-      "name": "Launch Program",
       "skipFiles": [
-        "<node_internals>/**"
+        "<node_internals>/**"      
       ],
-      "program": "${workspaceFolder}\\index.js"
+      "type": "pwa-node"
     }
   ]
 }
