@@ -40,7 +40,7 @@ const options = {
   family: 4
 };
 
-const MONGODB_URL = process.env.MONGODB_URL || "mongodb+srv://jenate00:3gK5SGyzl6MmrJ6j@team.lbqis.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const MONGODB_URL = process.env.MONGODB_URL || "mongodb+srv://jenate00:IQR0one35ofusb9d@team.lbqis.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 app
   .use(express.static(path.join(__dirname, 'public')))
