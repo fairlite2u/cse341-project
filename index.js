@@ -67,7 +67,7 @@ app
     family: 4
   };
   
-  const MONGODB_URL = process.env.MONGODB_URL || "mongodb+srv://jenate00:kcossJD6B2fphj0Z@team.lbqis.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+  const MONGODB_URL = process.env.MONGODB_URL || "mongodb+srv://fairlite2u:cb9gE1DI7TTkqcqX@team.lbqis.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
  
   mongoose
     .connect(MONGODB_URL, options)
