@@ -35,8 +35,8 @@ app.use(cors(corsOptions));
 const options = {
   useUnifiedTopology: true,
   useNewUrlParser: true,
-  useCreateIndex: true,
-  useFindAndModify: false,
+  // useCreateIndex: true,
+  // useFindAndModify: false,
   family: 4
 };
 
@@ -66,8 +66,8 @@ app
   .use((req, res, next) => {
     // 404 page
     res.render('pages/404', { title: '404 - Page Not Found', path: req.url });
-  })
-  .listen(PORT, () => console.log(`Listening on ${PORT}`));
+  });
+  // .listen(PORT, () => console.log(`Listening on ${PORT}`));
 
   mongoose
     .connect(MONGODB_URL, options)
