@@ -26,22 +26,6 @@ const ta02Routes = require('./routes/ta02');
 const ta03Routes = require('./routes/ta03');
 const ta04Routes = require('./routes/ta04');
 
-const corsOptions = {
-  origin: "https://cse341-project-fairlite2u.herokuapp.com/",
-  optionsSuccessStatus: 200
-};
-app.use(cors(corsOptions));
-
-const options = {
-  useUnifiedTopology: true,
-  useNewUrlParser: true,
-  // useCreateIndex: true,
-  // useFindAndModify: false,
-  family: 4
-};
-
-const MONGODB_URL = process.env.MONGODB_URL || "mongodb+srv://jenate00:kcossJD6B2fphj0Z@team.lbqis.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-
 app
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
@@ -69,6 +53,22 @@ app
   });
   // .listen(PORT, () => console.log(`Listening on ${PORT}`));
 
+  const corsOptions = {
+    origin: "https://cse341-project-fairlite2u.herokuapp.com/",
+    optionsSuccessStatus: 200
+  };
+  app.use(cors(corsOptions));
+  
+  const options = {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+    // useCreateIndex: true,
+    // useFindAndModify: false,
+    family: 4
+  };
+  
+  const MONGODB_URL = process.env.MONGODB_URL || "mongodb+srv://jenate00:kcossJD6B2fphj0Z@team.lbqis.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+ 
   mongoose
     .connect(MONGODB_URL, options)
     .then(result => {
