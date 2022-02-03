@@ -10,3 +10,12 @@
   background-color: #ffccff;
   color: purple;
 }
+
+select {
+  margin: 3px;
+  padding: 6px 12px;
+  border-radius: 3px;
+  vertical-align: middle;
+  color: purple;
+  border: solid 1px purple;
+}

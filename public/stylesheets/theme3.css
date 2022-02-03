@@ -10,3 +10,12 @@
   background-color: #ccffcc;
   color: green;
 }
+
+select {
+  margin: 3px;
+  padding: 6px 12px;
+  border-radius: 3px;
+  vertical-align: middle;
+  color: green;
+  border: solid 1px green;
+}

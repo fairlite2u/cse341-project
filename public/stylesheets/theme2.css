@@ -10,3 +10,12 @@
   background-color: #ffedcc;
   color: orange;
 }
+
+select {
+  margin: 3px;
+  padding: 6px 12px;
+  border-radius: 3px;
+  vertical-align: middle;
+  color: orange;
+  border: solid 1px orange;
+}
