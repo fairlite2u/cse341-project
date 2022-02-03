@@ -26,8 +26,8 @@
 
   <div class="container">
     <div>
+      <h2>Choose your page theme:</h2>
       <form action="/ta05/change-style" method="POST">
-        <label for='cssStyles'>Choose your theme</label>
         <select id="cssStyles" name="cssStyles">
           <option value='0'>
             Default (Blue)
@@ -42,27 +42,27 @@
             Green
           </option>
         </select>
-        <button type="submit">Change Style</button>
+        <button class="btn" type="submit">Change Style</button>
       </form>
     </div>
+    <hr>
 
     <div>
-      <form action="/ta05/counter" method="POST">
-        <input type="hidden" name="constant" value="1">
-        <button class="btn btn-default" type="submit">+</button>
-      </form>
-      <%= counter %>
-      <form action="/ta05/counter" method="POST">
-        <input type="hidden" name="constant" value="-1">
-        <button class="btn btn-default" type="submit">-</button>
-      </form>
-    </div>
-
-    <div>
-      <form action="/ta05/reset" method="POST">
-        <input type="hidden" name="reset" value="true">
-        <button class="btn btn-default" type="submit">Reset Session</button>
-      </form>
+      <h2>Counter: <%= counter %></h2>
+      <div class="counter-form">
+        <form action="/ta05/counter" method="POST">
+          <input type="hidden" name="constant" value="1">
+          <button class="btn" type="submit">+</button>
+        </form>
+        <form action="/ta05/counter" method="POST">
+          <input type="hidden" name="constant" value="-1">
+          <button class="btn" type="submit">-</button>
+        </form>
+        <form action="/ta05/reset" method="POST">
+          <input type="hidden" name="reset" value="true">
+          <button class="btn" type="submit">Reset</button>
+        </form>
+      </div>
     </div>
   </div>
 

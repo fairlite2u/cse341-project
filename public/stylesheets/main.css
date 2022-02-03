@@ -41,3 +41,23 @@
   width: 5rem;
   height: 5rem;
 }
+
+.container {
+  text-align: center;
+}
+
+.counter-form {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  margin: 3px;
+  background-color: #0065bd;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #b3dbff;
+  color: #0065bd;
+}
